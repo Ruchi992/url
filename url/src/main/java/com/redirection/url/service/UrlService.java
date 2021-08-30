@@ -20,6 +20,8 @@ public class UrlService {
 		if(lastIndexOfSlash != -1) {
 			urlToMatch = shortUrl.substring(0,lastIndexOfSlash);
 			searchString = shortUrl.substring(lastIndexOfSlash+1, shortUrl.length());
+		}else {
+			urlToMatch = shortUrl;
 		}
 		url = urlRepository.getFullUrlFromShortUrl(urlToMatch);
 		
